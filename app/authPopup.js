@@ -98,6 +98,7 @@ function seeProfile() {
     getTokenPopup(loginRequest)
         .then(response => {
             callMSGraph(graphConfig.graphMeEndpoint, response.accessToken, updateUI);
+            callApiGee(apigeeConfig.apigeeEndpoint, response.accessToken, updateUI);
         }).catch(error => {
             console.error(error);
         });
