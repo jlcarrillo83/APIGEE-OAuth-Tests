@@ -66,5 +66,25 @@ function updateUI(data, endpoint) {
                 }
             });
         }
+    } else if (endpoint === apigeeConfig.apigeeEndpoint) {
+        profileDiv.innerHTML = ''
+        const title = document.createElement('p');
+        title.innerHTML = "<strong>This is the response from APIGee: </strong>" + data;
+
+        profileDiv.appendChild(title);
+
+    }
+}
+
+function updateAPIGEEUI(data, endpoint) {
+    console.log('APIGee responded at: ' + new Date().toString());
+
+    if (endpoint === apigeeConfig.apigeeEndpoint) {
+        profileDiv.innerHTML = ''
+        const title = document.createElement('p');
+        title.innerHTML = "<strong>This is the response from APIGee: </strong>" + data;
+
+        profileDiv.appendChild(title);
+
     }
 }
