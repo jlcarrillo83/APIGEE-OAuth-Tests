@@ -17,7 +17,7 @@ function callApiGee(endpoint, token, callback) {
     console.log('request made to ApiGee at: ' + new Date().toString());
 
     fetch(endpoint, options)
-        .then(response => response.json())
+        .then(response => response.json()) 
         .then(response => callback(response, endpoint))
 
         //.then(response => response.text())
