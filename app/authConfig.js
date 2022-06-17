@@ -59,3 +59,7 @@ const tokenRequest = {
     scopes: ["User.Read", "Mail.Read"],
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
 };
+
+const apiGeeRequest = {
+    scopes: ["api://57a831d3-c01d-4cec-af58-5af0bb25d327/user_impersonation"]
+};

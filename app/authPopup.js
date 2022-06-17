@@ -113,7 +113,7 @@ function readMail() {
 }
 
 function seeAPIGee(){
-    getTokenPopup(loginRequest)
+    getTokenPopup(apiGeeRequest)
         .then(response => {
             callApiGee(apigeeConfig.apigeeEndpoint, response.accessToken, updateAPIGEEUI);
         }).catch(error => {
